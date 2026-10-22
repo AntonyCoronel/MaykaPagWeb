@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Fundación Mayka A.C.</title>
+<meta name="description" content="Fundación Mayka A.C.: cuidado y atención a adultos mayores en situación de vulnerabilidad en la Villa de Zaachila, Oaxaca.">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=Kalam:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/light/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<style>
+:root{
+  --bg:#fcf8fa; --surface:#ffffff; --tint:#f8e7ef; --ink:#21141c; --muted:#6b5662; --line:#ead9e2;
+  --accent:#c8176c; --accent-ink:#ffffff; --accent-soft:#fbdcea;
+  --shadow:0 24px 60px -28px rgba(120,20,70,.35);
+  --r:18px; --pill:999px;
+  --logo-filter:none; --paper:#ffffff; --paper-ink:#3b2a33; --hand:"Kalam",cursive;
+  --display:"Bricolage Grotesque",system-ui,sans-serif; --body:"Hanken Grotesk",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#150e13; --surface:#1f161c; --tint:#26161f; --ink:#f6edf2; --muted:#bba6b2; --line:#3a2833;
+  --logo-filter:brightness(1.75) saturate(.85); --paper:#f3ecef; --paper-ink:#3b2a33; --accent:#f0559a; --accent-ink:#22101a; --accent-soft:#3d1a2c; --shadow:0 24px 60px -28px rgba(0,0,0,.6);
+}}
+:root[data-theme="dark"]{
+  --bg:#150e13; --surface:#1f161c; --tint:#26161f; --ink:#f6edf2; --muted:#bba6b2; --line:#3a2833;
+  --logo-filter:brightness(1.75) saturate(.85); --paper:#f3ecef; --paper-ink:#3b2a33; --accent:#f0559a; --accent-ink:#22101a; --accent-soft:#3d1a2c; --shadow:0 24px 60px -28px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+h1,h2,h3{text-wrap:balance}
+::selection{background:var(--accent);color:var(--accent-ink)}
+html{scrollbar-color:color-mix(in srgb,var(--accent) 45%,var(--line)) var(--bg);accent-color:var(--accent)}
+input,textarea{caret-color:var(--accent)}
+:focus-visible{outline:2.5px solid var(--accent);outline-offset:3px;border-radius:12px}
+a{text-underline-offset:.2em}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.025em;line-height:1.08}
+h2{font-size:clamp(2rem,4vw,3.1rem);margin-bottom:18px}
+h3{font-size:1.3rem}
+p+p{margin-top:1em}
+.lead{color:var(--muted);max-width:62ch;font-size:1.08rem}
+.muted{color:var(--muted)}
+section{padding:104px 0;overflow-x:clip}
+.sec-head{margin-bottom:48px;max-width:760px}
+
+.mock-note{background:var(--ink);color:var(--bg);font-size:.82rem;text-align:center;padding:8px 16px}
+
+/* botones: pill */
+.btn{display:inline-flex;align-items:center;gap:.5em;padding:.85em 1.4em;border-radius:var(--pill);font:600 1rem var(--body);text-decoration:none;border:1.5px solid transparent;cursor:pointer;white-space:nowrap;transition:transform .25s cubic-bezier(.16,1,.3,1),background .25s,color .25s,border-color .25s}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:transparent}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn i{font-size:1.15em}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);border-bottom:1px solid var(--line)}
+.nav{position:relative;display:flex;align-items:center;justify-content:space-between;gap:20px;height:72px;max-width:1240px;margin:0 auto;padding:0 32px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:1.2rem;letter-spacing:-.02em;white-space:nowrap}
+.logo{height:54px;width:auto;filter:var(--logo-filter)}
+footer .logo{height:76px}
+.nav ul{display:flex;gap:24px;list-style:none;padding:0}
+.nav ul a{text-decoration:none;color:var(--muted);font-weight:500;transition:color .2s;white-space:nowrap}
+.nav ul a:hover,.nav ul a[aria-current="true"]{color:var(--ink)}
+.nav ul a{position:relative}
+.nav ul a[aria-current="true"]::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;border-radius:2px;background:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:4px}
+.icon-btn{width:44px;height:44px;border-radius:50%;border:0;background:transparent;color:var(--ink);font-size:1.3rem;display:grid;place-items:center;cursor:pointer;text-decoration:none}
+.icon-btn:hover{background:var(--tint)}
+.lang{font:700 .85rem var(--body)}
+
+/* carrusel del inicio */
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:64px 0 88px;min-height:calc(100dvh - 120px)}
+.slides{display:grid}
+.slide{grid-area:1/1;opacity:0;visibility:hidden;transition:opacity .7s ease,visibility .7s}
+.slide.on{opacity:1;visibility:visible}
+.slide .sub{font-family:var(--display);font-weight:500;font-size:clamp(1.15rem,1.8vw,1.4rem);letter-spacing:-.01em;color:var(--accent);margin:-6px 0 14px;max-width:30ch;line-height:1.3}
+.slide h1,.slide .h1{font-size:clamp(2.6rem,5.4vw,4.4rem);font-weight:800;margin-bottom:20px;text-wrap:balance}
+.slide p{color:var(--muted);font-size:1.15rem;max-width:44ch;margin-bottom:30px}
+.slide .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.carousel-ctl{display:flex;align-items:center;gap:4px;margin-top:36px}
+.arrow{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line);background:transparent;color:var(--ink);display:grid;place-items:center;font-size:1.1rem;cursor:pointer;transition:border-color .2s,color .2s}
+.arrow:hover{border-color:var(--accent);color:var(--accent)}
+.dots{display:flex;margin:0 8px}
+.dots button{position:relative;width:44px;height:44px;border:0;background:none;cursor:pointer;padding:0}
+.dots button::before,.dots button::after{content:"";position:absolute;left:5px;top:50%;height:4px;margin-top:-2px;border-radius:var(--pill)}
+.dots button::before{right:5px;background:var(--line)}
+.dots button::after{width:0;background:var(--accent)}
+.dots button[aria-current="true"]::after{width:calc(100% - 10px)}
+@keyframes fill{from{width:0}to{width:calc(100% - 10px)}}
+@media (prefers-reduced-motion:no-preference){
+  .dots button[aria-current="true"]::after{animation:fill 6.5s linear forwards}
+  .hero.paused .dots button::after{animation-play-state:paused}
+}
+.hero-photos{position:relative;aspect-ratio:4/5;border-radius:28px;overflow:hidden;box-shadow:var(--shadow);background:var(--tint)}
+.hero-photos img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity .9s ease,transform 6s ease-out}
+.hero-photos img.on{opacity:1;transform:scale(1)}
+
+/* bienvenidos */
+.welcome{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center}
+.welcome img{border-radius:24px;width:100%;aspect-ratio:3/4;object-fit:cover}
+.welcome .btn{margin-top:28px}
+
+/* historia */
+.tinted{background:var(--tint)}
+.history{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:start}
+.history .text p{color:var(--muted)}
+.history .text p strong{color:var(--ink);font-weight:600}
+.memoriam{background:var(--surface);border-radius:24px;padding:28px;border:1px solid var(--line);position:sticky;top:110px}
+.memoriam i{font-size:2rem;color:var(--accent)}
+.memoriam h3{margin:12px 0 8px}
+.memoriam p{color:var(--muted)}
+.memoriam img{border-radius:16px;margin-top:20px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:72px;position:relative;list-style:none;padding:0}
+.timeline::before{content:"";position:absolute;top:22px;left:0;right:0;height:2px;background:var(--line)}
+.timeline li{position:relative}
+.timeline .mark{width:46px;height:46px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:1.3rem;position:relative;margin-bottom:20px;box-shadow:0 0 0 6px var(--tint)}
+.timeline h3{margin-bottom:8px}
+.timeline p{color:var(--muted);font-size:.96rem}
+
+/* misión y visión */
+.mv-band{position:relative;isolation:isolate;overflow:hidden;padding:clamp(180px,24vw,300px) 0 80px;color:#fff}
+.mv-bg{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:62% 56%}
+.mv-band::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(24,8,17,.94) 0%,rgba(24,8,17,.72) 48%,rgba(24,8,17,.12) 100%)}
+.mv{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px)}
+.mv h3{font:600 1rem var(--body);color:#ffb6d6;margin-bottom:12px;letter-spacing:0}
+.mv p{font-family:var(--display);font-size:clamp(1.35rem,2.3vw,1.85rem);font-weight:500;line-height:1.32;letter-spacing:-.015em;max-width:30ch}
+
+/* valores: bento 2x2 */
+.values{display:grid;grid-template-columns:1.25fr 1fr;gap:18px}
+.value{position:relative;border-radius:24px;padding:32px;border:1px solid var(--line);background:var(--surface);overflow:hidden;min-height:280px;display:flex;flex-direction:column;justify-content:space-between;gap:28px}
+.value > i{font-size:2.2rem;color:var(--accent)}
+.value h3{font-size:1.6rem;margin-bottom:8px}
+.value p{color:var(--muted);max-width:50ch}
+.value.photo{color:#fff;border:0}
+.value.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.value.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(25,8,18,.88),rgba(25,8,18,.45) 55%,transparent)}
+.value.photo .body,.value.photo > i{position:relative;z-index:1;color:#fff}
+.value.photo p{color:rgba(255,255,255,.9)}
+.value.soft{background:var(--accent-soft);border:0}
+
+/* impacto */
+.impact{font-family:var(--display);font-size:clamp(1.75rem,4vw,3.3rem);font-weight:600;line-height:1.22;letter-spacing:-.025em;max-width:24ch}
+.impact strong{color:var(--accent);font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* cómo ayudar */
+.help{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.help article{background:var(--surface);border:1px solid var(--line);border-radius:28px;overflow:hidden;display:flex;flex-direction:column}
+.help img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.help .body{padding:32px;display:flex;flex-direction:column;gap:12px;flex:1}
+.help h3{font-size:1.5rem}
+.help p{color:var(--muted)}
+.help .btn{align-self:flex-start;margin-top:auto}
+
+/* qué hacemos: pestañas */
+.tabs{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:start}
+.tablist{display:grid;gap:6px}
+.tablist button{text-align:left;border:0;background:transparent;color:var(--muted);font:600 1.02rem var(--body);padding:16px 18px;border-radius:16px;cursor:pointer;display:flex;gap:12px;align-items:center;transition:background .2s,color .2s}
+.tablist button i{font-size:1.4rem}
+.tablist button:hover{background:var(--surface);color:var(--ink)}
+.tablist button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.tablist button[aria-selected="true"] i{color:var(--accent)}
+.panel{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.panel[hidden]{display:none}
+.panel img{border-radius:24px;width:100%;aspect-ratio:4/5;object-fit:cover}
+.panel h3{font-size:1.8rem;margin-bottom:16px}
+.panel p{color:var(--muted)}
+.badge{display:inline-flex;gap:8px;align-items:center;background:var(--surface);border-radius:var(--pill);padding:.55em 1em;font-size:.9rem;font-weight:600;margin:4px 6px 4px 0;color:var(--ink)}
+.badge i{color:var(--accent)}
+
+/* casas */
+.houses{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.house{border-radius:28px;padding:36px;background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.house .since{color:var(--accent);font-weight:600;margin-top:-6px}
+.house h3{font-size:1.7rem}
+.house p{color:var(--muted)}
+.house ul{list-style:none;padding:16px 0 0;display:grid;gap:10px;margin-top:auto;border-top:1px solid var(--line)}
+.house li{display:flex;gap:10px;align-items:flex-start}
+.house li i{color:var(--accent);font-size:1.25rem;margin-top:3px}
+.house li a{text-decoration:none}
+.house li a:hover{color:var(--accent)}
+
+/* equipo */
+.team-intro{max-width:800px;margin-bottom:48px}
+.team-intro p{color:var(--muted)}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.person{background:var(--surface);border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:6px}
+.person .mono{width:56px;height:56px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font:700 1.1rem var(--display);margin-bottom:12px}
+.person.lead-card{background:var(--accent);color:var(--accent-ink)}
+.person.lead-card .mono{background:color-mix(in srgb,var(--accent-ink) 18%,transparent);color:var(--accent-ink)}
+.person.lead-card .role{color:inherit;opacity:.85}
+.person h3{font-size:1.15rem}
+.person .role{color:var(--accent);font-weight:600;font-size:.95rem}
+.person .ced{color:var(--muted);font-size:.88rem}
+.person .links{display:flex;gap:8px;margin-top:auto;padding-top:14px}
+.person .links a{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1px solid currentColor;text-decoration:none;font-size:1.1rem;opacity:.85}
+.person .links a:hover{opacity:1}
+
+/* galería */
+.masonry{columns:3 280px;column-gap:16px}
+.masonry figure{break-inside:avoid;margin-bottom:16px;border-radius:18px;overflow:hidden}
+.masonry img{width:100%;transition:transform .9s cubic-bezier(.16,1,.3,1)}
+.masonry figure:hover img{transform:scale(1.03)}
+
+/* donantes */
+.donors{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.donors .text p{color:var(--muted)}
+.donor-card{background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:36px;box-shadow:var(--shadow)}
+.donor-card h3{margin-bottom:6px}
+.donor-card > p{color:var(--muted);margin-bottom:22px}
+.donor-names{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.donor-names span{border:1.5px solid var(--line);border-radius:var(--pill);padding:.55em 1.1em;font:700 1.05rem var(--display);letter-spacing:-.01em}
+.donor-card .btn{width:100%;justify-content:center}
+.donor-card small{display:block;text-align:center;color:var(--muted);margin-top:12px}
+
+/* contacto */
+.contact-sec{border-top:1px solid var(--line)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.contact .about{color:var(--muted);margin-bottom:32px}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.info h3{font:600 .95rem var(--body);color:var(--muted);margin-bottom:12px}
+.info ul{list-style:none;padding:0;display:grid;gap:12px}
+.info li{display:flex;gap:10px;align-items:flex-start;overflow-wrap:anywhere}
+.info li i{color:var(--accent);font-size:1.2rem;margin-top:3px}
+.info a{text-decoration:none}.info a:hover{color:var(--accent)}
+.info small{display:block;color:var(--muted);font-size:.85rem}
+.form{background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:32px;box-shadow:var(--shadow)}
+.form h3{font-size:1.5rem;margin-bottom:20px}
+.field{display:grid;gap:6px;margin-bottom:14px}
+.field label{font-weight:600;font-size:.92rem}
+.field input,.field textarea{font:500 1rem var(--body);color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:14px;padding:.8em 1em;outline:none;resize:vertical}
+.field input::placeholder,.field textarea::placeholder{color:var(--muted)}
+.field input:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+.field .err{color:var(--accent);font-size:.85rem;min-height:1.2em}
+.form .btn{width:100%;justify-content:center;margin-top:6px}
+.form .ok{display:none;text-align:center;padding:36px 0}
+.form .ok i{font-size:3rem;color:var(--accent)}
+.form.done .ok{display:block}.form.done .fields{display:none}
+
+footer{background:var(--tint);padding:64px 0 32px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:start}
+.foot-grid .brand{margin-bottom:14px}
+.foot-grid p{color:var(--muted);max-width:46ch}
+.foot-grid ul{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:4px 24px}
+.foot-grid ul a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;font-weight:500}
+.foot-grid ul a:hover{color:var(--accent)}
+.foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+.foot-bottom a{text-decoration:none}.foot-bottom a:hover{color:var(--accent)}
+.more{margin-top:1em}
+.more-btn{display:none;align-items:center;gap:6px;min-height:44px;border:0;background:none;padding:0;color:var(--accent);font:600 1rem var(--body);cursor:pointer}
+.more-btn i{transition:transform .3s}
+.more-btn[aria-expanded="true"] i{transform:rotate(180deg)}
+
+.wa{position:fixed;right:20px;bottom:20px;z-index:30;width:58px;height:58px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:1.8rem;box-shadow:var(--shadow);text-decoration:none;transition:transform .25s cubic-bezier(.16,1,.3,1)}
+.wa:hover{transform:scale(1.06)}
+
+/* álbum: fotos impresas y pies de foto a mano */
+.print{position:relative;margin:0;background:var(--paper);padding:10px 10px 0;border-radius:3px;box-shadow:0 1px 2px rgba(40,10,25,.12),0 24px 44px -24px rgba(90,20,55,.5);transform:rotate(var(--rot,0deg));transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.print img{display:block;width:100%;border-radius:1px;aspect-ratio:4/3;object-fit:cover}
+.print figcaption{font:400 1.15rem/1.3 var(--hand);color:var(--paper-ink);text-align:center;padding:10px 6px 14px}
+.hero-album{position:relative;padding:0 0 56px}
+.hero-album .main{width:86%}
+.hero-album .main figcaption{text-align:left;padding-left:8px}
+.hero-album .side figcaption{font-size:1rem}
+.hero-album .hero-photos{aspect-ratio:4/5;border-radius:1px;box-shadow:none}
+.hero-album .side{position:absolute;right:0;bottom:0;width:44%;z-index:1}
+.hero-album .side img{aspect-ratio:1;object-position:22% center}
+.welcome .print img{aspect-ratio:4/5}
+.welcome .print{max-width:460px}
+.memoriam .print{margin-top:22px}
+.memoriam .print img{border-radius:1px;margin:0;aspect-ratio:4/3}
+.help article{background:none;border:0;border-radius:0;overflow:visible}
+.help .print{margin:0 8px}
+.help .print img{aspect-ratio:16/10}
+.help .body{padding:28px 4px 0}
+.masonry{columns:3 280px;column-gap:28px}
+.masonry .print{break-inside:avoid;margin:0 6px 34px;border-radius:3px;overflow:visible}
+.masonry .print img{aspect-ratio:auto}
+.masonry .print:nth-child(3n+1){--rot:-1.6deg}.masonry .print:nth-child(3n+2){--rot:1.3deg}.masonry .print:nth-child(3n){--rot:-.7deg}
+.masonry .print:hover{transform:rotate(0) scale(1.02);z-index:2}
+.masonry figure:hover img{transform:none}
+.panel img{border-radius:3px;border:10px solid var(--paper);box-shadow:0 1px 2px rgba(40,10,25,.12),0 24px 44px -24px rgba(90,20,55,.5);transform:rotate(-1.2deg)}
+.values{grid-template-columns:repeat(4,1fr);gap:32px}
+.value{background:none;border:0;border-top:2px solid var(--ink);border-radius:0;padding:22px 0 0;min-height:0;justify-content:flex-start;gap:16px;overflow:visible}
+.value > i{font-size:2rem}
+.value h3{font-size:1.5rem}
+.team{gap:36px 32px}
+.person{background:none;border-radius:0;border-top:2px solid var(--ink);padding:22px 0 0}
+.person.lead-card{background:none;color:var(--ink)}
+.person.lead-card .mono{background:var(--accent);color:var(--accent-ink)}
+.person.lead-card .role{color:var(--accent);opacity:1}
+
+/* movimiento */
+header{transition:box-shadow .3s ease,background .3s ease}
+header.scrolled{box-shadow:0 12px 30px -22px rgba(60,15,40,.45)}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes lay{from{opacity:0;transform:translateY(34px) rotate(calc(var(--rot,0deg) + 7deg)) scale(1.06)}to{opacity:1;transform:rotate(var(--rot,0deg))}}
+@keyframes beat{0%,100%{transform:none}30%{transform:scale(1.28)}60%{transform:scale(.94)}}
+@keyframes pop{from{opacity:0;transform:scale(.4) rotate(-12deg)}to{opacity:1;transform:none}}
+@keyframes breathe{from{transform:scale(1.14)}to{transform:scale(1)}}
+@media (prefers-reduced-motion:no-preference){
+  /* el inicio: la foto grande se coloca y luego la pequeña encima */
+  .hero-album .main{animation:lay 1s cubic-bezier(.16,1,.3,1) .1s both}
+  .hero-album .side{animation:lay 1s cubic-bezier(.16,1,.3,1) .45s both}
+  .slide.on > *{animation:rise .7s cubic-bezier(.16,1,.3,1) both}
+  .slide.on > :nth-child(2){animation-delay:.08s}.slide.on > :nth-child(3){animation-delay:.16s}.slide.on > :nth-child(4){animation-delay:.24s}
+  /* fotos que se pegan en el álbum al llegar a ellas */
+  .js .print.reveal{opacity:0;transform:translateY(30px) rotate(calc(var(--rot,0deg) + var(--drop,6deg))) scale(1.05);transition:opacity .45s ease,transform 1s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i,0)*120ms)}
+  .js .print.reveal.in{opacity:1;transform:rotate(var(--rot,0deg))}
+  .masonry .print:nth-child(even){--drop:-6deg}
+  /* secciones que entran desde los lados hacia el centro */
+  .js .sl,.js .sr,.js .sb{opacity:0;transition:opacity .6s ease,transform 1s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i,0)*110ms)}
+  .js .sl{transform:translateX(-90px)}
+  .js .sr{transform:translateX(90px)}
+  .js .sb{transform:translateY(60px)}
+  .js .sl.in,.js .sr.in,.js .sb.in{opacity:1;transform:none}
+  .js .print.reveal.sl{transform:translateX(-110px) rotate(calc(var(--rot,0deg) - 6deg))}
+  .js .print.reveal.sl.in{transform:rotate(var(--rot,0deg))}
+  .js .masonry .print.reveal.in:hover{transform:rotate(0) scale(1.03);transition-delay:0s}
+  /* la línea del tiempo se dibuja */
+  .js .timeline::before{transform-origin:left;transform:scaleX(0);transition:transform 1.6s cubic-bezier(.16,1,.3,1) .1s}
+  .js .timeline.in::before{transform:none}
+  .js .timeline .mark{opacity:0;transform:scale(.4);transition:opacity .4s ease,transform .6s cubic-bezier(.34,1.5,.64,1);transition-delay:calc(var(--i,0)*260ms + .25s)}
+  .js .timeline.in .mark{opacity:1;transform:none}
+  /* la foto de misión respira con el scroll */
+  @supports (animation-timeline:view()){
+    .mv-bg{animation:breathe linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+  }
+  .btn:hover .ph-heart{animation:beat .7s ease}
+  .more.open{animation:rise .45s cubic-bezier(.16,1,.3,1)}
+  .form.done .ok i{display:inline-block;animation:pop .6s cubic-bezier(.34,1.5,.64,1)}
+  .form.done .ok h3,.form.done .ok p{animation:rise .5s cubic-bezier(.16,1,.3,1) .15s both}
+  .js .wa{transition:transform .45s cubic-bezier(.16,1,.3,1),opacity .3s ease}
+  .js .wa:not(.show){opacity:0;transform:translateY(90px) scale(.8);pointer-events:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}.slide,.hero-photos img,.masonry img{transition:none}
+  .slide.on > *,.hero-album .print{animation:fade .4s ease both}
+  .js .print.reveal{opacity:0;transition:opacity .5s ease}.js .print.reveal.in{opacity:1}
+  .js .sl,.js .sr,.js .sb{opacity:0;transition:opacity .5s ease}.js .sl.in,.js .sr.in,.js .sb.in{opacity:1}
+}
+
+/* responsive */
+@media (max-width:1180px){
+  .nav ul{gap:18px}
+  .nav ul a{font-size:.95rem}
+}
+@media (max-width:980px){
+  .nav{flex-wrap:wrap;height:auto;row-gap:2px;padding:8px 24px 4px}
+  html{scroll-padding-top:124px}
+  .nav ul{order:3;width:100%;overflow-x:auto;scrollbar-width:none;gap:22px;padding:4px 2px 10px;-webkit-mask:linear-gradient(90deg,#000 88%,#0000);mask:linear-gradient(90deg,#000 88%,#0000)}
+  .nav ul::-webkit-scrollbar{display:none}
+  .nav ul a{display:inline-flex;align-items:center;min-height:36px}
+  .nav ul a[aria-current="true"]::after{bottom:2px}
+}
+@media (max-width:960px){
+  .hero,.welcome,.history,.tabs,.donors,.contact{grid-template-columns:1fr;gap:40px}
+  .hero{padding:32px 0 64px;min-height:0}
+  .hero-album{order:-1;max-width:560px;margin:0 auto;width:100%}
+  .values{grid-template-columns:1fr 1fr}
+  .memoriam{position:static}
+  .welcome .print{max-width:420px;margin:0 auto}
+  .timeline{grid-template-columns:1fr 1fr;gap:36px}.timeline::before{display:none}
+  .houses{grid-template-columns:1fr}
+  .team{grid-template-columns:1fr 1fr}
+  .tablist{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:4px 16px 12px}
+  .tablist button{flex:none;scroll-snap-align:start;white-space:nowrap}
+  .panel{grid-template-columns:1fr}.panel img{aspect-ratio:16/10}
+}
+@media (max-width:640px){
+  .wrap{padding-left:16px;padding-right:16px}
+  section{padding:72px 0}
+  .nav{padding:8px 16px 4px}.nav .logo{height:46px}
+  .nav-right .btn{padding:.6em 1.05em}
+  .timeline,.team,.info{grid-template-columns:1fr}
+  .values,.help,.mv,.foot-grid{grid-template-columns:1fr}
+  .js .sl:not(.in){transform:translateX(-40px)}.js .sr:not(.in){transform:translateX(40px)}
+  .hero-album .side figcaption{font-size:.88rem;padding:6px 4px 8px}
+  .hero-album{padding-bottom:44px}.hero-album .side{width:42%}
+  .masonry{column-gap:14px}.masonry .print{margin:0 2px 22px;padding:6px 6px 0}.masonry .print figcaption{font-size:.98rem;padding:6px 2px 8px}
+  .mv{gap:32px}
+  .mv-band{padding-top:340px}
+  .mv-bg{object-position:50% 40%}
+  .house,.donor-card{padding:28px}
+  .more:not(.open){display:none}
+  .more-btn{display:inline-flex}
+  .carousel-ctl{margin-top:24px}
+  footer{padding-bottom:104px}
+  .form{padding:22px}
+  .masonry{columns:2}
+}
+</style>
+</head>
+<body>
+
+<div class="mock-note">Maqueta de rediseño. El contenido viene de fundacionmayka.com y las fotos son de la carpeta de Mayka.</div>
+
+<div id="top" aria-hidden="true"></div>
+<header>
+  <nav class="nav" id="nav">
+    <a class="brand" href="#inicio"><img class="logo" src="img/logo.webp" width="495" height="180" alt="Fundación Mayka A.C."></a>
+    <ul>
+      <li><a href="#acercaDeNosotros">Nosotros</a></li>
+      <li><a href="#queHacemos">¿Qué hacemos?</a></li>
+      <li><a href="#unete">Únete</a></li>
+      <li><a href="#historia">Historia</a></li>
+      <li><a href="#donantes">Donantes</a></li>
+      <li><a href="#contactos">Contacto</a></li>
+    </ul>
+    <div class="nav-right">
+      <a class="icon-btn lang" href="https://fundacionmayka.com.mx?lan=EN" aria-label="English">EN</a>
+      <button class="icon-btn" id="theme" aria-label="Cambiar tema"><i class="ph-light ph-moon"></i></button>
+      <a class="btn btn-primary" href="#donantes">Donar</a>
+    </div>
+  </nav>
+</header>
+<div class="wrap">
+
+  <main id="inicio">
+    <section class="hero" aria-roledescription="carrusel">
+      <div>
+        <div class="slides">
+          <div class="slide on">
+            <h1>Unidos por una causa</h1>
+            <p class="sub">Trabajando por una causa noble</p>
+            <p>Descubre cómo nuestra fundación trabaja para mejorar la calidad de vida de los adultos mayores.</p>
+            <div class="ctas"><a class="btn btn-primary" href="#acercaDeNosotros">Acerca de nosotros</a></div>
+          </div>
+          <div class="slide">
+            <h2 class="h1">Bienestar para mayores</h2>
+            <p class="sub">Comprometidos con el bienestar de nuestros mayores</p>
+            <p>Conoce cómo nuestros servicios y programas están diseñados para brindar el mejor cuidado y atención a nuestros beneficiarios.</p>
+            <div class="ctas"><a class="btn btn-primary" href="#unete">Únete a la causa</a></div>
+          </div>
+          <div class="slide">
+            <h2 class="h1">Compromiso con la sociedad</h2>
+            <p class="sub">Mejorando la calidad de vida de los adultos mayores</p>
+            <p>En Fundación Mayka A.C. trabajamos día a día para contribuir al desarrollo de una sociedad más justa y equitativa.</p>
+            <div class="ctas"><a class="btn btn-primary" href="#unete">Apoyar</a></div>
+          </div>
+          <div class="slide">
+            <h2 class="h1">Juntos por un futuro mejor</h2>
+            <p class="sub">Acompañando a nuestros mayores en su vejez</p>
+            <p>Únete a nuestra causa y colabora para mejorar la vida de las personas mayores y contribuir a una sociedad más solidaria.</p>
+            <div class="ctas"><a class="btn btn-primary" href="#donantes"><i class="ph-fill ph-heart"></i>Donar</a></div>
+          </div>
+        </div>
+        <div class="carousel-ctl">
+        <button class="arrow" id="prev" aria-label="Anterior"><i class="ph-light ph-arrow-left"></i></button>
+        <div class="dots" aria-label="Diapositivas">
+          <button aria-current="true" aria-label="Diapositiva 1"></button>
+          <button aria-current="false" aria-label="Diapositiva 2"></button>
+          <button aria-current="false" aria-label="Diapositiva 3"></button>
+          <button aria-current="false" aria-label="Diapositiva 4"></button>
+        </div>
+        <button class="arrow" id="next" aria-label="Siguiente"><i class="ph-light ph-arrow-right"></i></button>
+        </div>
+      </div>
+      <div class="hero-album">
+        <figure class="print main" style="--rot:-1.8deg">
+          <div class="hero-photos">
+            <img class="on" src="img/e-cuidado.jpg" data-cap="Hora del peinado" alt="Cuidadora peinando a una residente de la estancia">
+            <img src="img/e-consulta.jpg" data-cap="Revisión médica" alt="Médico revisando a un residente en su cama">
+            <img src="img/donacion.jpg" data-cap="Donativo con la Fundación del Dr. Simi" alt="Equipo de la fundación con cobijas y gorros donados junto a la Fundación del Dr. Simi">
+            <img src="img/e-sonrisa.jpg" data-cap="Una sonrisa en la estancia" alt="Residente de la estancia sonriendo">
+          </div>
+          <figcaption id="hero-cap" aria-live="polite">Hora del peinado</figcaption>
+        </figure>
+        <figure class="print side" style="--rot:3.5deg">
+          <img src="img/e-don.jpg" alt="Residente de la estancia sonriendo en el patio">
+          <figcaption>Villa de Zaachila, Oaxaca</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+</div>
+
+<section id="acercaDeNosotros">
+  <div class="wrap welcome">
+    <figure class="print reveal sl" style="--rot:-2deg"><img src="img/e-peinado.jpg" alt="Cuidadora atendiendo a una residente en la estancia"><figcaption>Cuidado de todos los días</figcaption></figure>
+    <div class="reveal sr" style="--i:1">
+      <h2>Bienvenidos a la Fundación Mayka A.C.</h2>
+      <p class="lead">Somos una organización no gubernamental que se dedica a ayudar a los adultos mayores en situación de vulnerabilidad. Creemos que todas las personas merecen una vida digna y por eso trabajamos arduamente para brindarles la ayuda que necesitan.</p>
+      <p class="lead">En nuestra fundación no tenemos lujos: cada centavo que recibimos se destina a pagar los sueldos de nuestro equipo de trabajo y a mantener nuestras instalaciones en óptimas condiciones para seguir ayudando a quienes más lo necesitan. Contamos contigo para seguir haciendo la diferencia en la vida de nuestros adultos mayores.</p>
+      <a class="btn btn-primary" href="#donantes"><i class="ph-fill ph-heart"></i>¡Dona ahora!</a>
+    </div>
+  </div>
+</section>
+
+<section id="historia" class="tinted">
+  <div class="wrap">
+    <div class="history">
+      <div class="text reveal sl">
+        <h2>Nuestra historia</h2>
+        <p><strong>La Fundación Mayka A.C. es un hogar para el corazón.</strong> Desde nuestro nacimiento en el año 2018 hemos dedicado nuestros esfuerzos a brindar cuidado y atención a aquellos que más lo necesitan: nuestros queridos adultos mayores.</p>
+        <p>Nos enorgullece ser líderes en el sector y contar con un equipo de profesionales comprometidos, inspirados por la pasión y liderazgo de nuestro presidente, el Enf. José Luis Hernández, así como por el compromiso y dedicación de nuestros médicos, Margarita Toledo y Guiexuuba Donaji Hernández.</p>
+        <div class="more" id="more-historia">
+        <p>Con el apoyo invaluable de generosos donadores, como SIMI, Fundación Emprendedores y Sandi, hemos sido capaces de expandir nuestros servicios y alcanzar nuevas metas.</p>
+        <p>En Fundación Mayka A.C. trabajamos juntos para crear un futuro lleno de esperanza y bienestar para nuestros adultos mayores. Agradecemos de todo corazón el apoyo de nuestros donadores, quienes nos permiten seguir adelante con nuestra misión de ayudar a quienes más lo necesitan.</p>
+        </div>
+        <button class="more-btn" aria-expanded="false" aria-controls="more-historia">Leer más <i class="ph-light ph-caret-down"></i></button>
+      </div>
+      <aside class="memoriam reveal sr" style="--i:1">
+        <i class="ph-light ph-flower-tulip"></i>
+        <h3>En memoria de Néstor Aquino Solís</h3>
+        <p>La reciente partida de Néstor, uno de los impulsores de nuestro proyecto, ha sido un recordatorio constante de la importancia de nuestra labor. Su legado perdura en cada una de las sonrisas de nuestros residentes, en cada momento compartido con ellos y en cada paso que damos hacia un futuro mejor.</p>
+        <figure class="print" style="--rot:1.5deg"><img src="img/e-patio.jpg" alt="Personal de la estancia caminando en el patio"><figcaption>Un paseo por el patio</figcaption></figure>
+      </aside>
+    </div>
+
+    <ol class="timeline reveal">
+      <li class="reveal"><div class="mark"><i class="ph-light ph-plant"></i></div><h3>Nacimiento</h3><p>La fundación nació de la preocupación por el bienestar de los adultos mayores en nuestra comunidad, al ver que muchas veces son olvidados o ignorados. La idea surgió de la necesidad de brindarles un lugar seguro y confortable para vivir, y un ambiente en el que se sientan valorados y cuidados.</p></li>
+      <li class="reveal" style="--i:1"><div class="mark"><i class="ph-light ph-house-line"></i></div><h3>Consolidación</h3><p>La fundación se consolidó gracias al esfuerzo y dedicación de un grupo de personas comprometidas con la causa. Con la colaboración de profesionales en diversas áreas, se estableció una estructura sólida para lograr los objetivos de la organización.</p></li>
+      <li class="reveal" style="--i:2"><div class="mark"><i class="ph-light ph-tree"></i></div><h3>Crecimiento</h3><p>Gracias al apoyo de la comunidad y de donantes comprometidos, establecimos relaciones con empresas y organizaciones para ofrecer más recursos y servicios. Ampliamos los servicios para llegar a más personas y nos expandimos a diferentes áreas geográficas.</p></li>
+      <li class="reveal" style="--i:3"><div class="mark"><i class="ph-light ph-confetti"></i></div><h3>Aniversario #5</h3><p>Celebramos con gratitud el impacto positivo en la vida de tantos adultos mayores. Agradecemos a nuestros donantes y voluntarios, parte fundamental de nuestro éxito y compromiso en la lucha por una vejez digna para todos.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="mv-band" aria-label="Misión y visión">
+  <img class="mv-bg" src="img/e-mirada.jpg" alt="">
+  <div class="wrap">
+    <div class="mv">
+      <div class="reveal sl"><h3>Misión</h3><p>Brindar el mejor cuidado y calidad de vida a los adultos mayores más vulnerables, fomentando su bienestar emocional, físico y social.</p></div>
+      <div class="reveal sr" style="--i:1"><h3>Visión</h3><p>Ser reconocidos como una organización líder en el cuidado de los adultos mayores, brindando servicios de calidad y excelencia a nivel nacional.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal sl"><h2>Nuestros valores</h2></div>
+    <div class="values">
+      <article class="value reveal sl">
+        <i class="ph-light ph-heart"></i>
+        <div class="body"><h3>Amor</h3><p>Nos mueve el amor y la compasión hacia los adultos mayores, y nos comprometemos a brindarles un hogar seguro, confortable y lleno de amor sin recibir ningún beneficio económico a cambio.</p></div>
+      </article>
+      <article class="value reveal sr" style="--i:1">
+        <i class="ph-light ph-hand-heart"></i>
+        <div class="body"><h3>Ayuda</h3><p>Ayudamos a los adultos mayores a mejorar su calidad de vida, ofreciéndoles servicios y actividades que promuevan su bienestar físico, emocional y social sin buscar ganancias económicas.</p></div>
+      </article>
+      <article class="value reveal sl">
+        <i class="ph-light ph-leaf"></i>
+        <div class="body"><h3>Naturaleza</h3><p>Valoramos y promovemos el contacto con la naturaleza, fundamental para la salud y el bienestar de los adultos mayores. Por eso trabajamos para crear entornos naturales y sostenibles en nuestras estancias.</p></div>
+      </article>
+      <article class="value reveal sr" style="--i:1">
+        <i class="ph-light ph-scales"></i>
+        <div class="body"><h3>Dignidad</h3><p>Todos los adultos mayores merecen vivir con dignidad, respeto y autonomía. Les brindamos un trato justo y digno, y garantizamos su acceso a servicios y recursos para vivir de manera independiente, sin lucro alguno.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal sl"><h2>Nuestro impacto</h2></div>
+    <p class="impact reveal sr">Hemos atendido a <strong data-count="2500">+2500</strong> adultos mayores, con <strong data-count="50">+50</strong> voluntarios activos y <strong data-count="5">+5</strong> años de servicio a la comunidad.</p>
+  </div>
+</section>
+
+<section id="unete" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal sl"><h2>¿Cómo ayudar?</h2></div>
+    <div class="help">
+      <article class="reveal sl">
+        <figure class="print" style="--rot:-1.2deg"><img src="img/e-domino.jpg" alt="Residentes jugando dominó"><figcaption>Partida de dominó</figcaption></figure>
+        <div class="body">
+          <h3>Únete a nuestra familia y brinda amor y compañía a nuestros residentes</h3>
+          <p>En nuestra búsqueda por mejorar la calidad de vida de los más necesitados, sabemos que no podemos hacerlo solos. Gracias a nuestros voluntarios hemos establecido alianzas con diversas organizaciones y mejorado nuestros programas de atención. Todo lo que hacemos es gracias a su dedicación y entrega desinteresada. Juntos podemos hacer una gran diferencia.</p>
+          <a class="btn btn-ghost" href="#contactos"><i class="ph-light ph-users-three"></i>Quiero ser voluntario</a>
+        </div>
+      </article>
+      <article class="reveal sr" style="--i:1">
+        <figure class="print" style="--rot:1.4deg"><img src="img/donacion.jpg" alt="Entrega de cobijas y gorros donados"><figcaption>Entrega de cobijas y gorros</figcaption></figure>
+        <div class="body">
+          <h3>Tu ayuda hace la diferencia: ayúdanos a cuidar de nuestros adultos mayores</h3>
+          <p>Hemos establecido alianzas estratégicas con diversas organizaciones. En 2021 recibimos una donación importante de SIMI que nos permitió fortalecer nuestros programas de atención. Todo lo que hacemos es sin fines de lucro: nuestra única motivación es ofrecer una vida digna y feliz a nuestros adultos mayores.</p>
+          <a class="btn btn-primary" href="#donantes"><i class="ph-fill ph-heart"></i>Donar</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="queHacemos" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal sl">
+      <h2>Acerca de nosotros</h2>
+      <p class="lead">Nuestro compromiso con la comunidad de adultos mayores.</p>
+    </div>
+    <div class="tabs reveal">
+      <div class="tablist reveal sl" role="tablist" aria-label="Qué hacemos">
+        <button role="tab" aria-selected="true" aria-controls="t1" id="b1"><i class="ph-light ph-handshake"></i>Alianzas estratégicas</button>
+        <button role="tab" aria-selected="false" aria-controls="t2" id="b2"><i class="ph-light ph-seal-check"></i>Calidad de atención</button>
+        <button role="tab" aria-selected="false" aria-controls="t3" id="b3"><i class="ph-light ph-sun-horizon"></i>Historia de éxito</button>
+        <button role="tab" aria-selected="false" aria-controls="t4" id="b4"><i class="ph-light ph-first-aid"></i>Compromiso con la salud</button>
+        <button role="tab" aria-selected="false" aria-controls="t5" id="b5"><i class="ph-light ph-medal"></i>Reconocimiento</button>
+      </div>
+      <div class="reveal sr" style="--i:1">
+        <div class="panel" role="tabpanel" id="t1" aria-labelledby="b1">
+          <img src="img/donacion.jpg" alt="Donativo de la Fundación del Dr. Simi">
+          <div><h3>Alianzas para el bienestar de los adultos mayores</h3><p>En nuestro esfuerzo constante por mejorar la vida de los adultos mayores, hemos establecido alianzas estratégicas con diversas organizaciones. En el año 2021 recibimos una donación importante de SIMI, lo que nos permitió fortalecer nuestros programas de atención y mejorar la calidad de vida de nuestros residentes.</p><p>Todo lo que hacemos es sin fines de lucro, ya que nuestra única motivación es ofrecer una vida digna y feliz a nuestros adultos mayores.</p></div>
+        </div>
+        <div class="panel" role="tabpanel" id="t2" aria-labelledby="b2" hidden>
+          <img src="img/e-presion.jpg" alt="Toma de presión arterial a una residente">
+          <div><h3>Comprometidos con la excelencia en el cuidado del adulto mayor</h3><p>En la Fundación Mayka A.C. nos esforzamos por brindar la mejor atención posible a nuestros residentes. En 2018 obtuvimos nuestro aviso de funcionamiento de responsables sanitarios por medio de la COFEPRIS, y en 2022 la certificación del INAPAM, lo que nos permitió mejorar aún más la calidad de nuestro servicio.</p><p><span class="badge"><i class="ph-light ph-seal-check"></i>COFEPRIS 2018</span><span class="badge"><i class="ph-light ph-seal-check"></i>INAPAM RUI1044/2022</span></p><p>Para nosotros cada residente es importante, y trabajamos para que se sienta valorado y cuidado en todo momento.</p></div>
+        </div>
+        <div class="panel" role="tabpanel" id="t3" aria-labelledby="b3" hidden>
+          <img src="img/e-residente.jpg" alt="Residente de la estancia acompañado por el personal">
+          <div><h3>Una historia de esperanza y superación en la vejez</h3><p>En nuestra trayectoria de cinco años hemos logrado grandes cosas gracias al apoyo de nuestra comunidad. En particular, nos enorgullece haber brindado un hogar seguro y acogedor a residentes como Delfino, quien fue abandonado y ahora recibe el 100% de nuestro cuidado.</p><p>Nos alegra saber que hemos marcado una diferencia en su vida y en la de muchos otros adultos mayores.</p></div>
+        </div>
+        <div class="panel" role="tabpanel" id="t4" aria-labelledby="b4" hidden>
+          <img src="img/e-ambulancia.jpg" alt="Personal trasladando a un residente en ambulancia">
+          <div><h3>Cuidando de la salud de quienes más lo necesitan</h3><p>La salud de nuestros residentes es nuestra máxima prioridad. Por eso obtuvimos el registro y certificación en COFEPRIS, lo que nos permite llevar a cabo trámites permanentes con instituciones de salud y asegurarnos de que nuestros residentes estén siempre al día en su cuadro de vacunación.</p><p><span class="badge"><i class="ph-light ph-seal-check"></i>COFEPRIS 23-000033995</span></p><p>Nuestros adultos mayores son una población vulnerable y queremos que se sientan protegidos y vivan con la tranquilidad que merecen.</p></div>
+        </div>
+        <div class="panel" role="tabpanel" id="t5" aria-labelledby="b5" hidden>
+          <img src="img/radio.jpg" alt="Integrantes de la fundación con sus reconocimientos">
+          <div><h3>Un reconocimiento a nuestra atención a las personas mayores en Oaxaca</h3><p>Este año fuimos reconocidos por nuestra labor, una prueba de nuestro compromiso con la atención y el bienestar de las personas mayores en nuestra comunidad.</p><p>Nos hemos enfocado en difundir y promover los beneficios de los servicios de salud que se brindan a través del Comité Estatal de Atención al Envejecimiento de Oaxaca. Nuestra inclusión en este Comité es una muestra de nuestro trabajo y dedicación.</p><p>¡Únase a nosotros y juntos hagamos la diferencia!</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal sl"><h2>Nuestras casas</h2></div>
+    <div class="houses">
+      <article class="house reveal sl">
+        <h3>Estancia para Adultos Mayores Donají</h3>
+        <span class="since">Desde el 15 de marzo de 2018</span>
+        <p>Fue creada en la casa de la Sra. Inés Martínez, inicialmente para cuidar de ella y de dos residentes más, ante la necesidad de crear un espacio seguro y agradable. Los residentes conviven permanentemente y realizan actividades lúdicas, sociales y culturales, apoyados por un equipo multidisciplinario especializado en brindar una adecuada calidad de vida y una vejez digna.</p>
+        <ul>
+          <li><i class="ph-light ph-map-pin"></i><a href="https://www.google.com/maps/search/?api=1&query=Tetzilacatzin+205+Barrio+de+San+Jacinto+Villa+de+Zaachila+Oaxaca" target="_blank" rel="noopener">Tetzilacatzin 205, Barrio de San Jacinto, Villa de Zaachila, Oaxaca</a></li>
+          <li><i class="ph-light ph-phone"></i><a href="tel:+529515287275">+52 951 528 7275</a></li>
+        </ul>
+      </article>
+      <article class="house reveal sr" style="--i:1">
+        <h3>Estancia para Adultos Mayores Donají 2.0</h3>
+        <span class="since">Después de la pandemia</span>
+        <p>Ante la creciente necesidad de albergar a más solicitantes se creó esta segunda casa, para continuar con la labor en beneficio de los adultos mayores. Forma parte de la Fundación Mayka A.C., organización con autorización del SAT para recibir donativos en especie o económicos.</p>
+        <ul>
+          <li><i class="ph-light ph-map-pin"></i><a href="https://www.google.com/maps/search/?api=1&query=Indio+de+Noyoo+27+Barrio+la+Purisima+Villa+de+Zaachila+Oaxaca" target="_blank" rel="noopener">Indio de Noyoo 27, Barrio La Purísima, Villa de Zaachila, Oaxaca</a></li>
+          <li><i class="ph-light ph-phone"></i><a href="tel:+529516728255">+52 951 672 8255</a></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="tinted">
+  <div class="wrap">
+    <div class="team-intro reveal sl">
+      <h2>Nuestro equipo</h2>
+      <p>Nuestro equipo está conformado por área médica, enfermería, terapia física, terapia ocupacional, nutrición y personal de apoyo. Todos cuentan con certificaciones y especializaciones en sus áreas, lo que les permite brindar una atención integral y de calidad a nuestros residentes.</p>
+      <div class="more" id="more-equipo"><p>Nuestro personal está en constante formación y actualización en prevención de enfermedades, nutrición y actividad física y mental, entre otros temas. Nos esforzamos por brindarle un ambiente de trabajo seguro, justo y respetuoso, para que pueda ofrecer la mejor atención posible.</p></div>
+      <button class="more-btn" aria-expanded="false" aria-controls="more-equipo">Leer más <i class="ph-light ph-caret-down"></i></button>
+    </div>
+    <div class="team">
+      <article class="person lead-card reveal sl">
+        <div class="mono">JL</div>
+        <h3>José Luis Hernández Martínez</h3>
+        <span class="role">Presidente de la Fundación</span>
+        <div class="links">
+          <a href="mailto:luishernandez@fundacionmayka.com.mx" aria-label="Correo"><i class="ph-light ph-envelope-simple"></i></a>
+          <a href="https://fundacionmayka.com/tarjetas.php?tarjetaUsuario=Luis" target="_blank" rel="noopener" aria-label="Tarjeta de contacto"><i class="ph-light ph-identification-card"></i></a>
+        </div>
+      </article>
+      <article class="person reveal sb" style="--i:1">
+        <div class="mono">MT</div>
+        <h3>Dra. Margarita Toledo Rasgado</h3>
+        <span class="role">Directora Médica</span>
+        <span class="ced">Cédula profesional: 11251467</span>
+        <div class="links">
+          <a href="tel:+5219512870684" aria-label="Teléfono"><i class="ph-light ph-phone"></i></a>
+          <a href="mailto:mtoledo@fundacionmayka.com.mx" aria-label="Correo"><i class="ph-light ph-envelope-simple"></i></a>
+          <a href="https://fundacionmayka.com/tarjetas.php?tarjetaUsuario=Margarita" target="_blank" rel="noopener" aria-label="Tarjeta de contacto"><i class="ph-light ph-identification-card"></i></a>
+        </div>
+      </article>
+      <article class="person reveal sr" style="--i:2">
+        <div class="mono">MC</div>
+        <h3>Mariana Cázarez Hernández</h3>
+        <span class="role">Asesora</span>
+        <span class="ced">Cédula Médico Cirujano: 10116552<br>Cédula Gerontología: 13345297</span>
+      </article>
+      <article class="person reveal sl">
+        <div class="mono">VA</div>
+        <h3>Virginia Carolina Ambrocio Felipe</h3>
+        <span class="role">Terapeuta</span>
+      </article>
+      <article class="person reveal sb" style="--i:1">
+        <div class="mono">VM</div>
+        <h3>Vianey Méndez Cruz</h3>
+        <span class="role">Terapeuta</span>
+      </article>
+      <article class="person reveal sr" style="--i:2">
+        <div class="mono">EN</div>
+        <h3>L.E. Mizraim Jaret Hernández Aguilar<br>L.E. Rolando Cortés Ruiz</h3>
+        <span class="role">Jefes de Enfermería</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal sl"><h2>Momentos que nos unen</h2></div>
+    <div class="masonry">
+      <figure class="print reveal"><img src="img/e-andadera.jpg" alt="Enfermero ayudando a un residente con su andadera"><figcaption>Paso a paso</figcaption></figure>
+      <figure class="print reveal" style="--i:1"><img src="img/catedral.jpg" alt="Calenda de la fundación frente a la Catedral de Oaxaca"><figcaption>Calenda frente a la Catedral</figcaption></figure>
+      <figure class="print reveal" style="--i:2"><img src="img/e-sala.jpg" alt="Residentes descansando en la sala"><figcaption>Descanso en la sala</figcaption></figure>
+      <figure class="print reveal"><img src="img/radio-8106.jpg" alt="Entrevista de la fundación en una cabina de radio"><figcaption>En cabina de radio</figcaption></figure>
+      <figure class="print reveal" style="--i:1"><img src="img/e-manos.jpg" alt="Manos de una residente durante una actividad"><figcaption>Manos a la obra</figcaption></figure>
+      <figure class="print reveal" style="--i:2"><img src="img/e-cuidado2.jpg" alt="Cuidadora acompañando a una residente"><figcaption>Siempre acompañados</figcaption></figure>
+      <figure class="print reveal"><img src="img/radio-8175.jpg" alt="Dos integrantes de Fundación Mayka con playeras de la fundación"><figcaption>Con la playera de la fundación</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="donantes" class="tinted">
+  <div class="wrap donors">
+    <div class="text reveal sl">
+      <h2>Donadores</h2>
+      <p>La labor que realizamos no sería posible sin el apoyo de nuestros donadores. Cada aporte, por pequeño que sea, es fundamental para mantener nuestros programas y servicios para los adultos mayores.</p>
+      <div class="more" id="more-donadores"><p>Como organización sin fines de lucro, nos enfocamos en brindar un espacio seguro y confortable para nuestros residentes y en ofrecer servicios de calidad que promuevan su bienestar físico y emocional. Si bien hemos recibido donaciones importantes de empresas y organizaciones como SIMI, necesitamos de manera constante el apoyo de nuestra comunidad.</p>
+      <p>Cada donación es una muestra de confianza en nuestro trabajo y nos motiva a seguir adelante. Agradecemos de antemano a todos los que consideren apoyar nuestra causa.</p></div>
+      <button class="more-btn" aria-expanded="false" aria-controls="more-donadores">Leer más <i class="ph-light ph-caret-down"></i></button>
+    </div>
+    <div class="donor-card reveal sr" style="--i:1">
+      <h3>Gracias a quienes nos apoyan</h3>
+      <p>Organizaciones que han hecho posible nuestro trabajo.</p>
+      <div class="donor-names"><span>SIMI</span><span>Fundación Emprendedores</span><span>Sandi</span></div>
+      <a class="btn btn-primary" href="https://www.paypal.com/donate/?hosted_button_id=U22DE6TD5LFD6" target="_blank" rel="noopener"><i class="ph-fill ph-heart"></i>¡Dona ahora!</a>
+      <small>Donativo seguro con PayPal. Autorizados por el SAT para recibir donativos.</small>
+    </div>
+  </div>
+</section>
+
+<section id="contactos" class="contact-sec">
+  <div class="wrap contact">
+    <div class="reveal sl">
+      <h2>Contáctanos</h2>
+      <p class="about">Nuestra fundación está dedicada al bienestar de adultos mayores: ofrecemos programas y servicios para mejorar su calidad de vida. Contamos con un equipo apasionado y comprometido. Trabajamos por una sociedad más justa y equitativa. Juntos, por un futuro mejor para nuestros mayores y para todos.</p>
+      <div class="info">
+        <div>
+          <h3>Contacto</h3>
+          <ul>
+            <li><i class="ph-light ph-phone"></i><span><a href="tel:+529514648878">+52 951 464 8878</a><small>Número principal</small></span></li>
+            <li><i class="ph-light ph-phone"></i><span><a href="tel:+529515287275">+52 951 528 7275</a><small>Donají</small></span></li>
+            <li><i class="ph-light ph-phone"></i><span><a href="tel:+529516728255">+52 951 672 8255</a><small>Donají 2.0</small></span></li>
+            <li><i class="ph-light ph-envelope-simple"></i><a href="mailto:informacion@fundacionmayka.com.mx">informacion@fundacionmayka.com.mx</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Redes sociales</h3>
+          <ul>
+            <li><i class="ph-light ph-facebook-logo"></i><a href="https://www.facebook.com/people/Fundaci%C3%B3n-Mayka-AC/100080109182916/" target="_blank" rel="noopener">Fundación Mayka A.C.</a></li>
+            <li><i class="ph-light ph-facebook-logo"></i><a href="https://www.facebook.com/people/Estancia-para-Adultos-Mayores-Donaj%C3%AD/100048101904289/" target="_blank" rel="noopener">Estancia Donají</a></li>
+            <li><i class="ph-light ph-twitter-logo"></i><a href="https://twitter.com/FundacionMayka" target="_blank" rel="noopener">@FundacionMayka</a></li>
+            <li><i class="ph-light ph-whatsapp-logo"></i><a href="https://api.whatsapp.com/send?phone=5219514648878&text=%C2%A1Hola!%20Me%20puedes%20dar%20m%C3%A1s%20informes%2C%20por%20favor" target="_blank" rel="noopener">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <form class="form reveal sr" style="--i:1" id="form" novalidate>
+      <div class="fields">
+        <h3>Envíanos un mensaje</h3>
+        <div class="field"><label for="nombre">Nombre</label><input id="nombre" name="nombre" autocomplete="name"><span class="err"></span></div>
+        <div class="field"><label for="email">Correo</label><input id="email" name="email" type="email" autocomplete="email" placeholder="tu@correo.com"><span class="err"></span></div>
+        <div class="field"><label for="telefono">Teléfono</label><input id="telefono" name="telefono" inputmode="numeric" autocomplete="tel" placeholder="10 dígitos"><span class="err"></span></div>
+        <div class="field"><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" rows="5"></textarea><span class="err"></span></div>
+        <button class="btn btn-primary" type="submit"><i class="ph-light ph-paper-plane-tilt"></i>Enviar mensaje</button>
+      </div>
+      <div class="ok" aria-live="polite"><i class="ph-fill ph-check-circle"></i><h3>¡Mensaje enviado!</h3><p class="muted">Te responderemos pronto.</p></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="#inicio"><img class="logo" src="img/logo.webp" width="495" height="180" alt="Fundación Mayka A.C."></a>
+      <p>Cuidado y atención a adultos mayores en la Villa de Zaachila, Oaxaca. Organización con autorización del SAT para recibir donativos en especie o económicos.</p>
+    </div>
+    <nav aria-label="Pie de página">
+      <ul>
+        <li><a href="#acercaDeNosotros">Nosotros</a></li>
+        <li><a href="#queHacemos">¿Qué hacemos?</a></li>
+        <li><a href="#unete">Únete</a></li>
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#donantes">Donantes</a></li>
+        <li><a href="#contactos">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 2023 Fundación Mayka A.C.</span>
+    <a href="https://fundacionmayka.com/PoliticaDePrivacidad.php?lan=ES" target="_blank" rel="noopener">Política de Privacidad</a>
+  </div>
+</footer>
+
+<a class="wa" href="https://api.whatsapp.com/send?phone=5219514648878&text=%C2%A1Hola!%20Me%20puedes%20dar%20m%C3%A1s%20informes%2C%20por%20favor" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><i class="ph-fill ph-whatsapp-logo"></i></a>
+
+<script>
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.documentElement.classList.add('js');
+const ease='cubic-bezier(.16,1,.3,1)';
+
+// tema
+const root=document.documentElement,themeBtn=document.getElementById('theme');
+const isDark=()=>root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+const paintIcon=()=>themeBtn.innerHTML=`<i class="ph-light ph-${isDark()?'sun':'moon'}"></i>`;
+try{const t=localStorage.getItem('mayka-theme');if(t)root.dataset.theme=t}catch(e){}
+paintIcon();
+themeBtn.onclick=()=>{root.dataset.theme=isDark()?'light':'dark';paintIcon();try{localStorage.setItem('mayka-theme',root.dataset.theme)}catch(e){}};
+
+const nav=document.getElementById('nav');
+
+// carrusel del inicio
+const slides=[...document.querySelectorAll('.slide')],photos=[...document.querySelectorAll('.hero-photos img')],dots=[...document.querySelectorAll('.dots button')];
+let cur=0,timer;
+function show(n){
+  cur=(n+slides.length)%slides.length;
+  slides.forEach((s,i)=>s.classList.toggle('on',i===cur));
+  photos.forEach((p,i)=>p.classList.toggle('on',i===cur));
+  const cap=document.getElementById('hero-cap');
+  cap.textContent=photos[cur].dataset.cap;
+  cap.animate([{opacity:0,transform:reduce?'none':'translateX(-8px)'},{opacity:1,transform:'none'}],{duration:500,easing:ease});
+  dots.forEach((d,i)=>d.setAttribute('aria-current',i===cur));
+}
+// avanza cuando termina de llenarse la barra del punto activo (se pausa con el cursor encima)
+dots.forEach((d,i)=>{d.onclick=()=>show(i);d.addEventListener('animationend',()=>show(cur+1))});
+document.getElementById('prev').onclick=()=>show(cur-1);
+document.getElementById('next').onclick=()=>show(cur+1);
+const hero=document.querySelector('.hero');
+['mouseenter','focusin'].forEach(ev=>hero.addEventListener(ev,()=>hero.classList.add('paused')));
+['mouseleave','focusout'].forEach(ev=>hero.addEventListener(ev,()=>hero.classList.remove('paused')));
+// deslizar en pantallas táctiles
+let x0=null;
+const pics=document.querySelector('.hero-photos');
+pics.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});
+pics.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(cur+(dx<0?1:-1));x0=null});
+
+// aparición al hacer scroll y contadores
+const count=el=>{
+  const end=+el.dataset.count,t0=performance.now(),dur=1400;
+  const step=t=>{const k=Math.min((t-t0)/dur,1);el.textContent='+'+Math.round(end*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(step)};
+  requestAnimationFrame(step);
+};
+// sombra del menú y botón de WhatsApp al salir del inicio
+const header=document.querySelector('header'),wa=document.querySelector('.wa');
+new IntersectionObserver(([e])=>header.classList.toggle('scrolled',!e.isIntersecting)).observe(document.getElementById('top'));
+// al regresar al inicio, las fotos se vuelven a colocar
+let heroLeft=false;
+new IntersectionObserver(([e])=>{
+  wa.classList.toggle('show',!e.isIntersecting);
+  if(!e.isIntersecting){heroLeft=true;return}
+  if(!heroLeft)return;
+  heroLeft=false;
+  document.querySelectorAll('.hero-album .print').forEach(p=>{p.style.animation='none';void p.offsetWidth;p.style.animation=''});
+}).observe(document.querySelector('.hero'));
+
+// entra al llegar a ella y se reinicia cuando sale por completo de la pantalla,
+// así las animaciones se repiten al volver a subir o bajar
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  const el=e.target;
+  if(e.intersectionRatio>=.15&&!el.classList.contains('in')){
+    el.classList.add('in');
+    if(!reduce)el.querySelectorAll('[data-count]').forEach(count);
+  }else if(!e.isIntersecting){
+    el.classList.remove('in');
+  }
+}),{threshold:[0,.15]});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// sección activa en el menú
+const links=[...nav.querySelectorAll('ul a')];
+const spy=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  links.forEach(a=>{
+    const on=a.getAttribute('href')==='#'+e.target.id;
+    a.setAttribute('aria-current',on);
+    const ul=a.closest('ul');
+    if(on&&ul.scrollWidth>ul.clientWidth)ul.scrollTo({left:a.parentElement.offsetLeft-24,behavior:reduce?'auto':'smooth'});
+  });
+}),{rootMargin:'-45% 0px -50% 0px'});
+links.forEach(a=>{const t=document.querySelector(a.getAttribute('href'));if(t)spy.observe(t)});
+
+// leer más (solo en celular)
+document.querySelectorAll('.more-btn').forEach(b=>b.onclick=()=>{
+  const open=b.getAttribute('aria-expanded')!=='true';
+  b.setAttribute('aria-expanded',open);
+  document.getElementById(b.getAttribute('aria-controls')).classList.toggle('open',open);
+  b.firstChild.textContent=open?'Leer menos ':'Leer más ';
+});
+
+// pestañas
+const tabs=[...document.querySelectorAll('[role=tab]')];
+tabs.forEach(t=>t.onclick=()=>{
+  if(t.getAttribute('aria-selected')==='true')return;
+  tabs.forEach(x=>{x.setAttribute('aria-selected',x===t);document.getElementById(x.getAttribute('aria-controls')).hidden=x!==t});
+  // la foto nueva se coloca y el texto entra detrás
+  const panel=document.getElementById(t.getAttribute('aria-controls')),img=panel.querySelector('img'),txt=panel.querySelector('div');
+  img.animate(reduce?[{opacity:0},{opacity:1}]:[{opacity:0,transform:'translateY(18px) rotate(3deg) scale(1.04)'},{opacity:1,transform:'rotate(-1.2deg)'}],{duration:reduce?300:700,easing:ease});
+  txt.animate(reduce?[{opacity:0},{opacity:1}]:[{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'none'}],{duration:500,delay:reduce?0:90,easing:ease,fill:'backwards'});
+});
+
+// formulario de contacto (maqueta: no envía)
+const form=document.getElementById('form');
+form.telefono.addEventListener('input',e=>e.target.value=e.target.value.replace(/\D/g,''));
+form.onsubmit=e=>{
+  e.preventDefault();let ok=true;
+  const check=(name,test,msg)=>{const i=form[name],err=i.nextElementSibling,bad=!test(i.value.trim());err.textContent=bad?msg:'';i.setAttribute('aria-invalid',bad);if(bad)ok=false};
+  check('nombre',v=>v.length>1,'Escribe tu nombre.');
+  check('email',v=>/^\S+@\S+\.\S+$/.test(v),'Revisa tu correo.');
+  check('telefono',v=>v.length>=10,'Escribe un teléfono de 10 dígitos.');
+  check('mensaje',v=>v.length>4,'Escribe tu mensaje.');
+  if(ok)form.classList.add('done');
+};
+</script>
+</body>
+</html>
