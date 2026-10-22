@@ -98,11 +98,11 @@ footer .logo{height:76px}
 .dots button[aria-current="true"]::after{width:calc(100% - 10px)}
 @keyframes fill{from{width:0}to{width:calc(100% - 10px)}}
 @media (prefers-reduced-motion:no-preference){
-  .dots button[aria-current="true"]::after{animation:fill 6.5s linear forwards}
+  .dots button[aria-current="true"]::after{animation:fill 4.5s linear forwards}
   .hero.paused .dots button::after{animation-play-state:paused}
 }
 .hero-photos{position:relative;aspect-ratio:4/5;border-radius:28px;overflow:hidden;box-shadow:var(--shadow);background:var(--tint)}
-.hero-photos img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity .9s ease,transform 6s ease-out}
+.hero-photos img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity .7s ease,transform 4.5s ease-out}
 .hero-photos img.on{opacity:1;transform:scale(1)}
 
 /* bienvenidos */
